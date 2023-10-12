@@ -3,7 +3,6 @@ package com.example.application.views;
 import com.example.application.data.User;
 import com.example.application.security.AuthenticatedUser;
 import com.example.application.views.about.AboutView;
-import com.example.application.views.chat.ChatView;
 import com.example.application.views.helloworld.HelloWorldView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -156,8 +155,6 @@ public class MainLayout extends AppLayout {
                 new MenuItemInfo("Hello World", LineAwesomeIcon.GLOBE_SOLID.create(), HelloWorldView.class), //
 
                 new MenuItemInfo("About", LineAwesomeIcon.FILE.create(), AboutView.class), //
-
-                new MenuItemInfo("Chat", LineAwesomeIcon.COMMENTS.create(), ChatView.class), //
 
         };
     }

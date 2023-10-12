@@ -43,3 +43,11 @@ Once the JAR file is built, you can run it using
 - Find add-ons at [vaadin.com/directory](https://vaadin.com/directory).
 - Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/vaadin) or join our [Discord channel](https://discord.gg/MYFq5RTbBn).
 - Report issues, create pull requests in [GitHub](https://github.com/vaadin).
+
+
+## PostgreSQL Config
+create role my_app_user password 'my_app_password';
+alter role my_app_user createdb login;
+create database my_app;
+alter database my_app owner to my_app_user;
+

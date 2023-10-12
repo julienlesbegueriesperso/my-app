@@ -1,6 +1,11 @@
 package com.example.application.data;
 
+import java.util.Set;
+
+import org.hibernate.annotations.Type;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
@@ -9,7 +14,6 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
-import java.util.Set;
 
 @Entity
 @Table(name = "application_user")
@@ -22,8 +26,9 @@ public class User extends AbstractEntity {
     @Enumerated(EnumType.STRING)
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<Role> roles;
+    
     @Lob
-    @Column(length = 1000000)
+    @Column(name = "profile_picture", columnDefinition="oid")
     private byte[] profilePicture;
 
     public String getUsername() {
@@ -54,7 +59,7 @@ public class User extends AbstractEntity {
         return profilePicture;
     }
     public void setProfilePicture(byte[] profilePicture) {
-        this.profilePicture = profilePicture;
+            this.profilePicture = profilePicture;
     }
 
 }
