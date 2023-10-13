@@ -46,8 +46,8 @@ Once the JAR file is built, you can run it using
 
 
 ## PostgreSQL Config
-create role my_app_user password 'my_app_password';
-alter role my_app_user createdb login;
-create database my_app;
-alter database my_app owner to my_app_user;
+- `create role my_app_user password 'my_app_password';`
+- `alter role my_app_user createdb login;`
+- `create database my_app;`
+- `alter database my_app owner to my_app_user;`
 
